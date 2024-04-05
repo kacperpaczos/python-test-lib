@@ -39,3 +39,6 @@ Plik wheel znajduje się w folderze "dist". Możesz także opublikować pakiet w
 ## Jak korzystać
 Możesz zainstalować pakiet lokalnie z pliku *.whl lub używając PIP.
 Aby zintegrować pakiet z twoim projektem, zaimportuj go w następujący sposób:
+```python
+import mypythonlib
+from mypythonlib import myfunctions
