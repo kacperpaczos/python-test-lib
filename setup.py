@@ -6,4 +6,6 @@ setup(
     version='0.1.0',
     description='My first Python library',
     author='Me',
+    setup_requires=['pytest-runner'],
+    tests_require=['pytest'],
 )

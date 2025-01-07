@@ -12,12 +12,19 @@
 
 3. Zainstaluj niezbędne pakiety:
    ```shell
-   pip install wheel setuptools twine pytest
+   pip install wheel setuptools twine pytest pytest-runner
    ```
 
 ## Wykonywanie testów
 
-1. Przeprowadź testy:
+Możesz uruchomić testy na dwa sposoby:
+
+1. Używając pytest bezpośrednio (zalecane):
+   ```shell
+   pytest
+   ```
+
+2. Lub poprzez setup.py:
    ```shell
    python setup.py pytest
    ```
@@ -31,7 +38,7 @@
 
 2. Zainstaluj pakiet z pliku wheel:
    ```shell
-   pip install /dist/mypythonlib-0.1.0-py3-none-any.whl
+   pip install ./dist/mypythonlib-0.1.0-py3-none-any.whl
    ```
 
 Plik wheel znajduje się w folderze "dist". Możesz także opublikować pakiet w repozytorium PyPI i zainstalować go stamtąd.
@@ -40,5 +47,7 @@ Plik wheel znajduje się w folderze "dist". Możesz także opublikować pakiet w
 Możesz zainstalować pakiet lokalnie z pliku *.whl lub używając PIP.
 Aby zintegrować pakiet z twoim projektem, zaimportuj go w następujący sposób:
 ```python
-import mypythonlib
-from mypythonlib import myfunctions
+from mypythonlibrary import mylib
+
+# Przykład użycia:
+distance = mylib.haversine(4.895168, 52.370216, 13.404954, 52.520008)  # Amsterdam do Berlin
